@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paket TKA Bahasa Indonesia Campuran</title>
+    <link rel="stylesheet" href="styles.css?v=1" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark">TKA</div>
+          <div>
+            <h1>Paket Soal</h1>
+            <p>Bahasa Indonesia SMA</p>
+          </div>
+        </div>
+
+        <div class="progress-card">
+          <div class="progress-row">
+            <span>Progres</span>
+            <strong id="progressText">0/30</strong>
+          </div>
+          <div class="progress-track">
+            <div id="progressFill"></div>
+          </div>
+        </div>
+
+        <nav class="question-grid" id="questionGrid" aria-label="Navigasi nomor soal"></nav>
+
+        <div class="legend">
+          <span><i class="dot active"></i>Aktif</span>
+          <span><i class="dot answered"></i>Terjawab</span>
+          <span><i class="dot review"></i>Ragu-ragu</span>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Simulasi TKA 2026</p>
+            <h2>Campuran Literasi, Sekolah, Teknologi, dan Budaya</h2>
+          </div>
+          <div class="top-actions">
+            <button class="icon-button" id="toggleKeyBtn" title="Tampilkan/sembunyikan kunci">Kunci</button>
+            <button class="icon-button" id="printBtn" title="Cetak atau simpan PDF">Cetak</button>
+          </div>
+        </header>
+
+        <section class="content-grid">
+          <article class="stimulus-panel">
+            <div class="section-label" id="stimulusMeta"></div>
+            <h3 id="stimulusTitle"></h3>
+            <div id="stimulusBody" class="stimulus-body"></div>
+          </article>
+
+          <article class="question-panel">
+            <div class="question-head">
+              <div>
+                <span class="pill" id="questionType"></span>
+                <span class="pill ghost" id="difficultyPill"></span>
+              </div>
+              <button class="review-button" id="reviewBtn">Tandai ragu-ragu</button>
+            </div>
+
+            <div class="question-number" id="questionNumber"></div>
+            <div class="question-text" id="questionText"></div>
+            <div id="answerArea" class="answer-area"></div>
+
+            <div class="answer-note hidden" id="answerNote"></div>
+
+            <div class="nav-actions">
+              <button id="prevBtn">Sebelumnya</button>
+              <button id="nextBtn" class="primary">Berikutnya</button>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <div id="printAll" class="print-all" aria-hidden="true"></div>
+
+    <script src="data.js?v=1"></script>
+    <script src="explanations.js?v=1"></script>
+    <script src="app.js?v=1"></script>
+  </body>
+</html>
